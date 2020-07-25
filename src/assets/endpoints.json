@@ -1,0 +1,66 @@
+[
+    {
+        "title": "Inpatient States",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/inpatient/states",
+        "description": "Retrieves the abbreviations of states available for inpatient charge queries.",
+        "response": "array<string>",
+        "type": "inpatient",
+        "method": "GET"
+    },
+    {
+        "title": "Inpatient Cities",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/inpatient/cities/{stateAbbreviation}",
+        "description": "Retrieves the names of cities available within a state for inpatient charge queries.",
+        "response": "array<string>",
+        "type": "inpatient",
+        "method": "GET"
+    },
+    {
+        "title": "Diagnosis-Related Groups",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/inpatient/drgs/{stateAbbreviation}/{cityName}",
+        "description": "Retrieves the diagnosis-related groups available within a geographic region for inpatient charge queries.",
+        "response": "array<DiagnosisRelatedGroup>",
+        "type": "inpatient",
+        "method": "GET"
+    },
+    {
+        "title": "Inpatient Charges",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/inpatient/charges/{stateAbbreviation}/{cityName}/{drgId}",
+        "description": "Retrieves the hospital charge data for a region associated with the specified state, city, and diagnoisis-related group.",
+        "response": "array<InpatientCharge>",
+        "type": "inpatient",
+        "method": "GET"
+    },
+    {
+        "title": "Outpatient States",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/outpatient/states",
+        "description": "Retrieves the abbreviations of states available for outpatient charge queries.",
+        "response": "array<string>",
+        "type": "outpatient",
+        "method": "GET"
+    },
+    {
+        "title": "Outpatient Cities",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/outpatient/cities/{stateAbbreviation}",
+        "description": "Retrieves the names of cities available within a state for outpatient charge queries.",
+        "response": "array<string>",
+        "type": "outpatient",
+        "method": "GET"
+    },
+    {
+        "title": "Ambulatory Payment Classifications",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/outpatient/apcs/{stateAbbreviation}/{cityName}",
+        "description": "Retrieves the ambulatory payment classifications available within a geographic region for outpatient charge queries.",
+        "response": "array<AmbulatoryPaymentClassification>",
+        "type": "outpatient",
+        "method": "GET"
+    },
+    {
+        "title": "Outpatient Charges",
+        "url": "http://healthcare-topics.com/comparehospitalcharges/api/outpatient/charges/{stateAbbreviation}/{cityName}/{apcId}",
+        "description": "Retrieves the hospital charge data for a region associated with the specified state, city, and ambulatory payment classification.",
+        "response": "array<OutpatientCharge>",
+        "type": "outpatient",
+        "method": "GET"
+    }
+]

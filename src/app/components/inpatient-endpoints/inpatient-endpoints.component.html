@@ -1,0 +1,17 @@
+<p>
+    The Hospital Charges API provides a hypertext-driven process for
+    retrieving regional inpatient and outpatient hospital charge data.
+    The following list of methods describes the endpoints that can be 
+    used to retrieve inpatient data.
+</p>
+<mat-expansion-panel *ngFor="let endpoint of endpoints">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{endpoint.title}}
+        </mat-panel-title>
+        <mat-panel-description>
+            {{endpoint.description}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-endpoint-display [endpointProperty]="endpoint"></app-endpoint-display>
+</mat-expansion-panel>

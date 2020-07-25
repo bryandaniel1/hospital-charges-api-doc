@@ -1,0 +1,9 @@
+.left-column {
+    justify-content: center;
+}
+
+.endpoint-card {
+    width: 70%;
+    margin-left:auto; 
+    margin-right:auto;
+}

@@ -1,0 +1,13 @@
+.header-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header-space {
+    flex: 1;
+}
+
+.mat-button:hover  {
+    background-color: #ff4081;
+}

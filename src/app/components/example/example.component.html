@@ -1,0 +1,36 @@
+<div class="example-container">
+    <mat-card class="example-input-card">
+        <mat-card-header>
+            <mat-card-title>Example Client</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <h4>State and City</h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Choose a state</mat-label>
+                <mat-select placeholder="" (selectionChange)="getInpatientCities($event.value)">
+                    <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div *ngIf="cities">
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a city</mat-label>
+                    <mat-select placeholder="" (selectionChange)="getDrgs($event.value)">
+                        <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div *ngIf="drgs">
+                <h4>Diagnosis-Related Group</h4>
+                <mat-form-field class="drg-select" appearance="fill">
+                    <mat-label>Choose a diagnosis-related group</mat-label>
+                    <mat-select placeholder="" (selectionChange)="getInpatientCharges($event.value)">
+                        <mat-option *ngFor="let drg of drgs" [value]="drg.drgId">{{drg.drgDefinition}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-divider [vertical]="true"></mat-divider>
+    <app-example-request-response class="example-request-response" [data]="requestResponse">
+    </app-example-request-response>
+</div>

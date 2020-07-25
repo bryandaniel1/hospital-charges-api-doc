@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <div  class="header-row">
+    <span>Hospital Charges API</span>
+    <span class="header-space"></span>
+    <a href="http://healthcare-topics.com/comparehospitalcharges" mat-button class="mat-button">Compare Hospital Charges</a>
+  </div>
+</mat-toolbar>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     [routerLink]="['/inpatient']"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    Inpatient Endpoints
+  </a>
+  <a mat-tab-link
+     [routerLink]="['/outpatient']"
+     routerLinkActive #rla2="routerLinkActive"
+     [active]="rla2.isActive">
+    Outpatient Endpoints
+  </a>
+  <a mat-tab-link
+     [routerLink]="['/example']"
+     routerLinkActive #rla3="routerLinkActive"
+     [active]="rla3.isActive">
+    Example
+  </a>
+</nav>
+<router-outlet></router-outlet>

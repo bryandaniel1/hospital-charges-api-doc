@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Request and Response</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="request-response-content">
+        <h4>URL</h4>
+        <p><a *ngIf="requestResponse" href="{{requestResponse.url}}" target="_blank">{{requestResponse.url}}</a></p>
+        <h4>Response</h4>
+        <pre class="response-content" *ngIf="requestResponse">{{requestResponse.response | json}}</pre>
+    </mat-card-content>
+</mat-card>

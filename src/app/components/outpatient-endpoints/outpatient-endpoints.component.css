@@ -1,0 +1,13 @@
+.mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header.mat-expanded:hover,
+.mat-expansion-panel-header.mat-expanded:focus {
+    background-color: #3f51b5;
+}
+.mat-expansion-panel-header.mat-expanded mat-panel-title,
+.mat-expansion-panel-header.mat-expanded mat-panel-description {
+    color: white;
+}
+p {
+    margin: 2% 25%;
+    text-align: center;
+}

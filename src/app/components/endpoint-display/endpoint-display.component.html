@@ -1,0 +1,44 @@
+<mat-card class="endpoint-card">
+    <mat-card-header>
+        <mat-card-title>{{endpointProperty.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-table [dataSource]="endpointData">
+            <ng-container matColumnDef="endpointInformation">
+                <mat-header-cell class="left-column" style="width: 10%;" *matHeaderCellDef> Endpoint Information
+                </mat-header-cell>
+                <mat-cell class="left-column" *matCellDef="let element"> {{element.endpointInformation}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="value">
+                <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="columnHeaders"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columnHeaders;"></mat-row>
+        </mat-table>
+    </mat-card-content>
+</mat-card>
+<mat-card class="endpoint-card" *ngIf="objectDetailsAvailable">
+    <mat-card-header>
+        <mat-card-title>{{objectName}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-table [dataSource]="responseObjectData">
+            <ng-container matColumnDef="endpointInformation">
+                <mat-header-cell class="left-column" style="width: 10%;" *matHeaderCellDef> Response Object Information
+                </mat-header-cell>
+                <mat-cell class="left-column" *matCellDef="let element"> {{element.endpointInformation}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="value">
+                <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="columnHeaders"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columnHeaders;"></mat-row>
+        </mat-table>
+    </mat-card-content>
+</mat-card>
